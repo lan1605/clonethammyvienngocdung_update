@@ -248,24 +248,24 @@
                   </div>
                   <div class="checkbox">
                     <div class="checkbox-item">
-                      <input type="checkbox" name="time[]" id="" value="8h-10h" />
-                      <span>8h-10h</span>
+                      <input type="checkbox" name="time[]" id="8h-10h" value="8h-10h"  />
+                      <label for="8h-10h">8h-10h</label>
                     </div>
                     <div class="checkbox-item">
-                      <input type="checkbox" name="time[]" id="" value="10h-12h" />
-                      <span>10h-12h</span>
+                      <input type="checkbox" name="time[]" id="10h-12h" value="10h-12h" />
+                      <label for="10h-12h">10h-12h</label>
                     </div>
                     <div class="checkbox-item">
-                      <input type="checkbox" name="time[]" id="" value="12h-14h" />
-                      <span>12h-14h</span>
+                      <input type="checkbox" name="time[]" id="12h-14h" value="12h-14h" />
+                      <label for="12h-14h">12h-14h</label>
                     </div>
                     <div class="checkbox-item">
-                      <input type="checkbox" name="time[]" id="" value="14h-16h" />
-                      <span>14h-16h</span>
+                      <input type="checkbox" name="time[]" id="14h-16h" value="14h-16h" />
+                      <label for="14h-16h">14h-16h</label>
                     </div>
                     <div class="checkbox-item">
-                      <input type="checkbox" name="time[]" id="" value="Giờ khác" />
-                      <span>Giờ khác</span>
+                      <input type="checkbox" name="time[]" id="Giờ khác" value="Giờ khác" />
+                      <label for="Giờ khác">Giờ khác</label>
                     </div>
                   </div>
                 </div>
