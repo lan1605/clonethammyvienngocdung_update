@@ -1,0 +1,772 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  max-width: 1920px;
+  justify-content: space-between;
+}
+a {
+  text-decoration: none;
+}
+.wrapper {
+  display: block;
+  width: 100%;
+  min-height: 500px;
+}
+.container {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  width: 420px;
+  height: 100%;
+
+  position: relative;
+}
+
+/* Banner */
+.banner-header {
+  width: 100%;
+}
+.banner-header img {
+  width: 100%;
+}
+/* Form đăng ký */
+.form {
+  width: 100%;
+}
+.form-signup {
+  width: 100%;
+  padding: 0px 35px;
+  background: rgb(237, 238, 255);
+}
+.form-content {
+  padding: 20px 30px;
+  background: rgb(234, 242, 254);
+  width: 100%;
+}
+.title-form,
+.btn-signup,
+.checkbox-form--title {
+  text-align: center;
+}
+.title-form {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(5, 34, 74);
+}
+.checkbox-form--title {
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: rgb(0, 0, 0);
+}
+.select-form,
+.input-form {
+  width: 100%;
+
+  padding: 10px 5px;
+  outline: none;
+  border-radius: 20px;
+  border: 1px solid rgb(20, 22, 141);
+  color: black;
+}
+.form-item,
+.select-form {
+  margin-bottom: 12px;
+}
+.input-form::placeholder {
+  color: black;
+}
+.select-form {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+  padding-right: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  /* text-overflow: initial; */
+}
+.option-form--hidden {
+  display: none;
+}
+.input-form {
+  background: transparent;
+}
+.checkbox {
+  padding: 10px 5px;
+  border: 1px solid rgb(20, 22, 141);
+  border-radius: 20px;
+  margin-top: 10px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 5px;
+}
+.btn-signup {
+  padding: 15px 20px;
+  width: 50%;
+  display: block;
+
+  margin: 20px auto 0;
+  background: linear-gradient(40deg, rgb(20, 87, 141), rgb(20, 22, 141));
+  border-radius: 30px;
+  outline: none !important;
+  border: 0 !important;
+  cursor: pointer;
+  animation: scaleBtn 1.5s ease infinite;
+}
+.btn {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 20px;
+  background: linear-gradient(to left, #c89917, rgb(252, 234, 201), #c89917);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.mess-signup {
+  color: red;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
+/* Countdown */
+.time-countdown {
+  display: block;
+  width: 70%;
+  margin: 30px auto;
+  background: white;
+}
+.time-countdown--content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 1px solid black;
+  border-radius: 20px 0 20px 0;
+  padding: 5px 0px;
+}
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.time .number {
+  color: rgb(10, 103, 233);
+  font-size: 30px;
+  font-weight: bold;
+}
+.time .text {
+  color: rgb(132, 132, 132);
+  font-size: 12px;
+}
+/* Bình luận */
+.comment {
+  padding-left: 20px;
+}
+.comment-header {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(132, 132, 132);
+  color: rgb(5, 34, 74);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.comment-title {
+  font-size: 30px;
+  line-height: 1.6;
+}
+.comment-total {
+  font-size: 16px;
+}
+.comment-content {
+  margin: 5px 0 0 3px;
+  width: 100%;
+  border-left: 1px dashed rgb(209, 208, 208);
+}
+.comment-item {
+  display: flex;
+  align-items: flex-start;
+  padding-left: 5px;
+  gap: 20px;
+  flex-direction: row;
+}
+.comment-item:not(:last-child) {
+  padding-bottom: 20px;
+}
+.comment-avatar img {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.comment-info {
+  color: rgb(5, 34, 74);
+}
+.comment-name {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: bold;
+}
+.comment-context {
+  font-size: 14px;
+  text-align: justify;
+  line-height: 1.6;
+  padding: 10px 20px 0 0;
+}
+.comment-feedback {
+  font-size: 12px;
+  line-height: 1.2;
+  margin-top: 3px;
+}
+.comment-feedback--text {
+  color: rgb(67, 102, 176);
+}
+.comment-feedback--time {
+  color: rgb(93, 93, 93);
+}
+.comment-options,
+.comment-options--other,
+.comment-options--like {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+.comment-options--link {
+  text-decoration: none;
+  color: rgb(67, 102, 176);
+}
+.comment-options--like {
+  gap: 2px;
+}
+.comment-options--like img {
+  width: 20px;
+  height: 20px;
+}
+.comment-options--time {
+  color: rgb(67, 102, 176);
+}
+.comment-rated {
+  color: rgb(255, 230, 0);
+}
+.dot-loading {
+  display: block;
+  margin: 0 auto;
+
+  padding: 13px 15px;
+  background: rgb(235, 233, 233);
+  width: 16%;
+  border-radius: 20px;
+}
+.dot-content {
+  display: flex;
+  justify-content: center;
+}
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgb(212, 212, 212);
+  animation: dotAnimate 1.5s infinite linear;
+  animation-delay: 0.5s;
+  position: relative;
+}
+.dot::before,
+.dot::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: 0;
+  background: rgb(212, 212, 212);
+  border-radius: 50%;
+}
+.dot::before {
+  left: 15px;
+  animation: dotAnimateBefore 1.5s infinite linear;
+  animation-delay: 1s;
+}
+.dot::after {
+  left: -15px;
+  animation: dotAnimateAfter 1.5s infinite linear;
+  animation-delay: 0s;
+}
+.button-signup {
+  display: block;
+  margin: 20px auto 20px;
+  background: red;
+  width: 45%;
+  color: white;
+  font-weight: bold;
+  padding: 13px 15px;
+  text-align: center;
+}
+.button-signup a {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* Banner Footen */
+.banner-footer {
+  width: 100%;
+  background: rgb(20, 22, 141);
+  padding: 20px 0 90px 25px;
+}
+.banner-footer img {
+  width: 90%;
+}
+/* Button nhận ưu đãi */
+.btn-offer {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  margin: 0 auto;
+  background: #c89917;
+  text-align: center;
+  padding: 15px 0;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  max-width: 420px;
+  cursor: pointer;
+  width: 100%;
+  animation: btnOfferScale 1s ease infinite;
+  overflow: auto !important;
+}
+.contact {
+  position: fixed;
+  width: 100%;
+  right: 10px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(20, 22, 141);
+  cursor: pointer;
+  animation-name: icOpenShow;
+  animation-duration: 0.5s;
+}
+.btn-open,
+.btn-close {
+  pointer-events: none;
+}
+.btn-close {
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+.btn-close.block {
+  display: block;
+  animation-name: icCloseShow;
+  animation-duration: 0.5s;
+}
+.btn-open.block {
+  display: block;
+  animation-name: icOpenShow;
+  animation-duration: 0.5s;
+}
+.btn-open.none {
+  display: none;
+}
+.animation-fadeup {
+  animation-name: fadeInUp;
+  animation-delay: 0.2s;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+}
+.contact-container {
+  max-width: 350px;
+  width: 100%;
+  position: fixed;
+  right: 10px;
+  min-height: 800px;
+  background: white;
+  display: none;
+  bottom: 80px;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.16);
+}
+.contact-header {
+  background: rgb(20, 22, 141);
+  color: white;
+  height: 150px;
+  padding: 10px 15px 0;
+  position: relative;
+  width: 100%;
+}
+.contact-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+.contact-close {
+  display: none;
+}
+.contact-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact-logo img {
+  width: 35px;
+  height: 35px;
+}
+.contact-logo span {
+  font-weight: bold;
+}
+.contact-desc {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+.contact-content {
+  color: black;
+  position: absolute;
+  top: 120px;
+  display: inline-flex;
+  padding: 0 15px;
+  width: 100%;
+  gap: 15px;
+  flex-direction: column;
+}
+.contact-item {
+  background: white;
+  border: 1px solid #eeeeee;
+  border-radius: 3px;
+  padding: 15px;
+}
+.chat-title,
+.contact-item--title {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 10px;
+
+  font-family: "Roboto", sans-serif;
+}
+.chat-desc {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.chat-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.chat-name {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  background: rgb(10, 103, 233);
+}
+.chat-btn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 20px;
+  cursor: pointer;
+  background: rgb(20, 22, 141);
+  color: white;
+}
+.chat-btn img {
+  width: 20px;
+  height: 20px;
+}
+.chat-btn span {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+.contact-item--list {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-item--social {
+  background: white;
+  border: 1px solid #eeeeee;
+  border-radius: 3px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-item--info {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  color: black;
+  font-size: 14px;
+}
+.ic-right {
+  width: 15px;
+  height: 15px;
+}
+.visible {
+  display: block;
+  animation-name: toggleContact;
+  animation-duration: 0.5s;
+}
+.chat-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  padding: 10px 25px;
+  display: none;
+}
+.active {
+  display: block;
+}
+.chat-close {
+  text-align: right;
+  color: rgb(209, 208, 208);
+  cursor: pointer;
+}
+.chat-context {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 100px;
+}
+.chat-context .chat-name {
+  display: inline-flex;
+  margin: 0 auto;
+}
+.chat-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.chat-item {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 3px;
+  flex-direction: column;
+}
+.chat-input {
+  padding: 10px;
+  outline: none;
+  border: 1px solid #f1f3f4;
+}
+.chat-label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+.chat-form--btn {
+  outline: none;
+  background: #2b34dd;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  padding: 10px;
+  width: 90%;
+  display: block;
+  margin: 10px auto 0;
+  cursor: pointer;
+}
+.noti {
+  font-size: 12px;
+  color: red !important;
+}
+/* Animation */
+@keyframes scaleBtn {
+  50% {
+    scale: 1.1;
+  }
+}
+
+@keyframes btnOfferScale {
+  50% {
+    scale: 1.1;
+    /* width: 100%; */
+  }
+}
+@keyframes dotAnimateBefore {
+  0% {
+    scale: 1;
+    background: rgb(212, 212, 212);
+  }
+  30% {
+    scale: 1.2;
+    background: rgb(93, 93, 93);
+  }
+  60%,
+  100% {
+    scale: 1;
+    background: rgb(212, 212, 212);
+  }
+}
+@keyframes dotAnimate {
+  0% {
+    scale: 1;
+    background: rgb(212, 212, 212);
+  }
+  30% {
+    scale: 1.2;
+    background: rgb(93, 93, 93);
+  }
+  60%,
+  100% {
+    scale: 1;
+    background: rgb(212, 212, 212);
+  }
+}
+@keyframes dotAnimateAfter {
+  0% {
+    scale: 1;
+    background: rgb(212, 212, 212);
+  }
+  30% {
+    scale: 1.2;
+    background: rgb(93, 93, 93);
+  }
+  60%,
+  100% {
+    scale: 1;
+    background: rgb(212, 212, 212);
+  }
+}
+@keyframes icCloseShow {
+  0% {
+    opacity: 0;
+    transform: rotateZ(25deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateZ(0);
+  }
+}
+@keyframes icOpenShow {
+  0% {
+    opacity: 0;
+    transform: rotateZ(-25deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateZ(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes toggleContact {
+  0% {
+    opacity: 0;
+    bottom: -80px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 80px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .comment {
+    padding-left: 10px;
+  }
+  .comment-content {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-container {
+    min-height: 500px;
+    height: 100%;
+    bottom: 0;
+    width: 100%;
+    right: 0;
+  }
+  .contact-close {
+    display: block;
+    border-radius: 0 0 0 15px;
+    padding: 5px 10px 8px;
+    text-align: center;
+    cursor: pointer;
+    background: rgb(17, 18, 112);
+  }
+  .contact-header {
+    padding-top: 20px;
+  }
+
+  @keyframes toggleContact {
+    0% {
+      opacity: 0;
+      /* bottom: -70px; */
+    }
+    100% {
+      opacity: 1;
+      /* bottom: 70px; */
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .btn-signup {
+    width: 55%;
+  }
+  .time-countdown {
+    width: 75%;
+  }
+  .time-countdown--content {
+    gap: 25px;
+  }
+  .dot,
+  .dot::after,
+  .dot::before {
+    width: 7px;
+    height: 7px;
+  }
+  .dot::before {
+    left: 10px;
+  }
+  .dot::after {
+    left: -10px;
+  }
+}
